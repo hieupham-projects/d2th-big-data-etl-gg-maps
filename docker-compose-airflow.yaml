@@ -22,7 +22,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
   networks:
-    - ohitv
+    - ggmaps
   depends_on:
     &airflow-depends-on
     postgres:
@@ -81,7 +81,7 @@ services:
       - pgadmin_data:/var/lib/pgadmin
     restart: 'always'
     networks:
-      - ohitv
+      - ggmaps
 ### POSTGRES ###
   postgres:
     image: postgres:12.20-alpine3.20
@@ -101,7 +101,7 @@ services:
       start_period: 5s
     restart: 'always'
     networks:
-      - ohitv
+      - ggmaps
 
 ### Minio
   minio:
@@ -117,11 +117,11 @@ services:
       - MINIO_ROOT_USER=admin12345
       - MINIO_ROOT_PASSWORD=admin12345
     networks:
-      - ohitv
+      - ggmaps
     restart: 'always'
 
 networks:
-  ohitv:
+  ggmaps:
     driver: bridge
 volumes:
   postgres-db-volume:

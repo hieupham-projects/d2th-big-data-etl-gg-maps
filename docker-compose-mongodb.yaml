@@ -16,7 +16,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
     networks:
-      - airflow-etl-ohitv_ohitv
+      - airflow-etl-ggmaps_ggmaps
   mongo-express:
     image: mongo-express:1.0.2-20-alpine3.19
     container_name: mongodb-express
@@ -29,10 +29,10 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://admin:admin@mongo:27017/
       ME_CONFIG_BASICAUTH: "FALSE"
     networks:
-      - airflow-etl-ohitv_ohitv
+      - airflow-etl-ggmaps_ggmaps
 
 networks:
-  airflow-etl-ohitv_ohitv:
+  airflow-etl-ggmaps_ggmaps:
     external: true
 volumes:
   mongo-data:

@@ -2,3 +2,4 @@ logs/
 plugins/keys.json
 minio_storage
 .idea/
+__pycache__

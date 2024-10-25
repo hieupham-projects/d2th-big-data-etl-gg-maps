@@ -4,7 +4,7 @@
 echo "Starting Airflow and MongoDB services..."
 
 # Start Airflow services
-docker compose -f docker-compose-airflow.yaml -p airflow-etl-ohitv up -d
+docker compose -f docker-compose-airflow.yaml -p airflow-etl-ggmaps up -d
 
 # Start MongoDB services
 docker compose -f docker-compose-mongodb.yaml -p mongodb up -d
