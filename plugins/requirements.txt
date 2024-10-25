@@ -6,4 +6,4 @@ minio==7.2.7
 fastparquet==2024.5.0
 pyarrow==17.0.0
 pymongo==4.8.0
-selenium=4.25.0
+selenium==4.25.0
