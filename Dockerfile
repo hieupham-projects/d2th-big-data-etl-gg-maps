@@ -1,5 +1,6 @@
-FROM apache/airflow:slim-2.5.0rc2-python3.10
+FROM apache/airflow:2.6.0-python3.10
 
+# Switch back to airflow user
 USER airflow
 
 COPY plugins plugins

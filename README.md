@@ -1,11 +1,4 @@
-# Ohitv End To End Project
-
-# Film Information Crawling and ETL Project
-
-## Objective
-Crawl film information from [Ohitv.info](https://ohitv.info) and incrementally load updates daily into Postgres and MongoDB for analysis and visualization.
-
----
+# D2TH-big-data-etl-gg-maps
 
 ## Tech Stack
 - **Docker**: Manages services like Airflow, Minio, Postgres, and MongoDB.
@@ -15,36 +8,6 @@ Crawl film information from [Ohitv.info](https://ohitv.info) and incrementally l
 - **MongoDB**: NoSQL database for testing queries and learning.
 - **PowerBI**: Visualizes insights from the data.
 - **Python**: Language used for scripting.
-
----
-
-## Libraries
-- `BeautifulSoup`
-- `pandas`
-- `numpy`
-- `requests`
-
----
-
-## Workflow
-
-### 1. Extraction
-- Crawl film data from [Ohitv.info](https://ohitv.info) using `requests` and `BeautifulSoup`.
-- Save the raw data to Minio under the bucket `ohitv-raw`.
-
-### 2. Transformation
-- Use Python to clean and transform the data.
-- Store the transformed data in Minio under the bucket `ohitv-processed`.
-
-### 3. Load
-- Load transformed data into Postgres for visualization and analysis with PowerBI.
-- Load data into MongoDB to test and learn NoSQL querying.
-
-### 4. Visualization
-- Use PowerBI to visualize and report insights from the data stored in Postgres.
-
-### 5. Orchestration
-- Use Apache Airflow to manage and orchestrate the ETL pipeline, which runs daily.
 
 ---
 
@@ -93,10 +56,3 @@ Crawl film information from [Ohitv.info](https://ohitv.info) and incrementally l
 ### 5. Access Airflow
 - Open Airflow in your browser at `localhost:8080`
 - `Run the Pipeline`: Click the `Run` button on the DAG to execute the workflow.
-
-
-## My Project Flow Chart
-![ohitv-end-to-end-flowchart](images/ohitv_end_to_end_flowchart.png)
-
-## My Project Ohitv Report
-![ohitv-report](images/ohitv_report.png)

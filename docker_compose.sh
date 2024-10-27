@@ -11,4 +11,3 @@ docker compose -f docker-compose-mongodb.yaml -p mongodb up -d
 
 # Display a message after services are started
 echo "Airflow and MongoDB services have been started."
-
